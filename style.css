@@ -1,0 +1,141 @@
+h1, #formDetails, #table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif ;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+table {
+    padding: 1px;
+}
+
+input, select, button {
+    border: none;
+    outline: none;
+}
+
+button {
+    /* width: 225px; */
+    width: 100%;
+    background-color: #fff;
+    cursor: pointer;
+        
+    &:hover {
+        background-color: rgb(117, 236, 177);
+    }
+}
+
+#table {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+#table {
+    padding: 0;
+}
+
+#table th, #table td {
+    padding: 5px;
+}
+
+.deleteBtn {
+    background-color: red;
+    color: white;
+    width: 60px;
+    padding: 2px 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+/* ========== RESPONSIVE FIXES ========== */
+@media (max-width: 768px) {
+    h1, #formDetails, #table {
+        flex-wrap: wrap;
+    }
+
+    #formDetails {
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    #table {
+        width: 100%;
+        overflow-x: auto;
+        margin: 30px auto;
+        padding: 0 10px;
+    }
+
+    #table table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 6px;
+        text-align: center;
+    }
+
+    button, .deleteBtn {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #formDetails {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        gap: 8px;
+        padding: 5px;
+    }
+
+    #table {
+        width: 100%;
+        overflow-x: auto;
+        margin: 20px auto;
+        padding: 0 5px;
+    }
+
+    #table table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 4px;
+        word-break: keep-all; /* allows text to wrap */
+        font-size: 0.6rem;
+    }
+
+    button {
+        font-size: 0.6rem;
+        padding: 6px 8px;
+    }
+
+    label,input[type="radio"] {
+        font-size: 0.8rem;
+    }
+
+    .deleteBtn {
+        width: auto;
+        padding: 5px 8px;
+        font-size: 0.6rem;
+    }
+}
+
+/* ===== Fix for hover in plain CSS ===== */
+button:hover {
+    background-color: rgb(117, 236, 177);
+}
+
+.deleteBtn:hover {
+    background-color: red;
+}
